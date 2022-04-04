@@ -9,3 +9,6 @@ const multiplication = (a, b) => a * b;
 
 // Division function
 const division = (a, b) => a / b;
+
+// Operate function
+const operate = (operator, a, b) => operator(a, b);
