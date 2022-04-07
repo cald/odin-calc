@@ -1,18 +1,16 @@
-#container {
+#calculator {
+    width: 400px;
+}
+
+#calculator-keys {
     display: grid;
-    grid-template-areas:
-        "screen screen"
-        "numbers operators";
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.screen {
-    grid-area: screen;
+button {
+    aspect-ratio: 1;
 }
 
-.number {
-    grid-area: numbers;
-}
-
-.operator {
-    grid-area: operators;
+#equals {
+    grid-row: span 2;
 }
