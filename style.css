@@ -6,11 +6,3 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
-
-button {
-    aspect-ratio: 1;
-}
-
-#equals {
-    grid-row: span 2;
-}
