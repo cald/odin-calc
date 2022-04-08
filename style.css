@@ -1,3 +1,7 @@
+* {
+    font-family: "Lucida Console", Courier, monospace;
+}
+
 body {
     margin: 0;
     display: grid;
@@ -7,28 +11,64 @@ body {
 
 #calculator {
     display: grid;
-    /* gap: 2px; */
     padding: 4px;
     background-color: black;
     border-style: solid;
     border-color: black;
     border-radius: 8px;
     grid-template-columns: repeat(4, 50px);
-    grid-auto-rows: 50px;
-    width: max-content;
+    grid-template-rows: repeat(2, 25px) repeat(5, 50px);
 }
 
-#calculator-screen {
+#calculator-screen, #calculator-screen-above {
     grid-column: span 4;
     background-color: black;
     color: white;
 }
 
-#equals {
-    grid-row: span 2;
+#calculator-screen {
+    text-align: right;
+    font-size: larger;
+}
+
+#calculator-screen-above {
+    text-align: left;
+    font-size: smaller;
 }
 
 button {
+    margin: 0;
+    padding: 0;
     border-radius: 0;
     border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    background-color: white;
+    font-size: larger;
+}
+
+button:hover {
+    filter: brightness(80%);
+}
+
+button:active {
+    filter: brightness(50%);
+}
+
+button:disabled {
+    background-color: grey;
+    filter: brightness(100%);
+}
+
+.equals {
+    grid-row: span 2;
+    background-color: orange;
+}
+
+.operator {
+    background-color: yellow;
+}
+
+.clear {
+    background-color: red;
 }
